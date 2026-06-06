@@ -3,14 +3,73 @@
 > Instrucciones del repositorio para sesiones de OpenCode / agentes IA.
 > Lee este archivo **junto con** `README.md` (quickstart y estructura),
 > `DESIGN.md` (tokens, voz, reglas visuales) y `ROADMAP.md` (alcance y
-> fases). La documentación `.md` del repo está en **español** por
-> decisión del proyecto; la app es bilingüe (ES por defecto, EN con el
-> selector del header).
+> fases). La documentación `.md` está en español por decisión del
+> proyecto (ver regla 9); la app es bilingüe ES/EN con la sección
+> `i18n` de este archivo como contrato de paridad.
+
+## Skills (`.agents/skills/`) — uso obligatorio
+
+El repositorio incluye skills especializados en `.agents/skills/`. **Toda
+tarea — implementación, refactor, revisión, investigación — debe empezar
+cargando con la herramienta `skill` la skill o skills que apliquen al
+trabajo.** No escribas código sin haber revisado las reglas que
+correspondan.
+
+### Skills de Fase 1 (carga según el área que toques)
+
+- `next-best-practices`: convenciones de Next.js 14 App Router.
+- `next-cache-components`: caching, ISR y `revalidate` en Next 14.
+- `next-upgrade`: solo si la tarea es subir de versión de Next.
+- `react-best-practices`: patrones de React 19 (memo, suspense, etc.).
+- `composition-patterns`: composición de componentes, state lifting.
+- `tailwind-css-patterns`: patrones de Tailwind v3 (no v4).
+- `tailwind-v4-shadcn`: solo si se migra a Tailwind v4.
+- `shadcn`: primitivos UI estilo shadcn, variantes, formularios, iconos.
+- `frontend-design`: diseño visual, layouts, jerarquía.
+- `accessibility`: WCAG y patrones a11y.
+- `seo`: metadata, sitemap, robots, OpenGraph.
+- `typescript-advanced-types`: tipos avanzados de TS (genéricos,
+  conditional types, etc.).
+
+### Skills de Fase 2 (no cargar todavía)
+
+Estas viven ya en `.agents/skills/` para que la transición a backend
+sea fluida, pero **no se usan** mientras la Fase 1 siga activa:
+
+- `nodejs-backend-patterns`
+- `nodejs-best-practices`
+
+Se cargarán en cuanto se abra la Fase 2 (ver `ROADMAP.md`).
+
+## i18n (bilingüe ES/EN)
+
+La app soporta dos locales: `es` (default) y `en`, configurados en
+`src/i18n/routing.ts`. Toda cadena visible al usuario vive en
+`messages/es.json` y `messages/en.json`.
+
+- **Cualquier string nuevo** (componente nuevo, mensaje de error,
+  tooltip, label, copy de la página `/about`, etc.) se añade **a los
+  dos archivos** con la misma clave, mismo orden y misma estructura.
+- Los nombres y descripciones del catálogo de trucos siguen la clave
+  `tricks.<id>.{name,short,description,tips}` y se replican
+  literalmente entre ES y EN.
+- Si necesitas plurales, usa la sintaxis ICU de `next-intl`
+  (`{count, plural, =0 {...} one {...} other {# ...}}`).
+- `tips` es opcional; la consulta usa `t.has(...)` + fallback
+  configurado en `src/i18n/request.ts` para no romper el build si
+  falta.
+- Si una nueva feature introduce strings, la regla 3 obliga a
+  actualizar `README.md`; esta sección sirve de contrato de
+  paridad ES ↔ EN.
 
 ## Reglas obligatorias (lee esto antes de cualquier cambio)
 
 1. **Antes de implementar**, lee en este orden: `AGENTS.md` y `README.md`.
-2. **Después de cualquier implementación relevante**, actualiza
+2. **Carga las skills relevantes de `.agents/skills/`** listadas en la
+   sección anterior. Si la tarea toca varias áreas (p. ej. UI + a11y,
+   o routing + i18n), carga todas las que apliquen. Sin esto, no
+   empieces a escribir código.
+3. **Después de cualquier implementación relevante**, actualiza
    `README.md` si cambió alguno de estos puntos:
    - comandos de desarrollo o build,
    - estructura de carpetas,
@@ -22,28 +81,66 @@
    - i18n (locales, claves, namespaces),
    - configuración del proyecto (Next, Tailwind, next-intl, etc.),
    - decisiones técnicas relevantes.
-3. **Si vas a tocar diseño, UI, estilos, temas dark/light, colores,
+4. **Si vas a tocar diseño, UI, estilos, temas dark/light, colores,
    tipografías, espaciados, componentes visuales, animaciones o UX**,
    lee `DESIGN.md` **antes** de tocar código.
-4. **Si el cambio altera diseño, tokens, componentes visuales, reglas
+5. **Si el cambio altera diseño, tokens, componentes visuales, reglas
    de UI o estilo general**, actualiza `DESIGN.md` en la misma sesión.
-5. **Para cualquier fase nueva, feature nueva, cambio de scope,
+6. **Para cualquier fase nueva, feature nueva, cambio de scope,
    pendiente, postergación o tarea completada**, lee y actualiza
    `ROADMAP.md`.
-6. **`ROADMAP.md` debe mantenerse con checkboxes claros** y tachar /
+7. **`ROADMAP.md` debe mantenerse con checkboxes claros** y tachar /
    completar lo que realmente se implemente. Lo no terminado se queda
    marcado.
-7. **No implementes nada de Fase 2** mientras siga clasificado como
-   futuro: backend, auth, base de datos, Supabase, comunidad, uploads,
-   skill tree visual, combo builder, PWA, cloud sync. Solo procede con
-   instrucción **explícita** del usuario.
-8. **Toda la documentación `.md` del repo queda en español.** La app
+8. **No implementes nada de Fase 2** sin instrucción **explícita**
+   del usuario. Fase 2 todavía no está definida: hay opciones
+   sobre la mesa (Next.js + Supabase, backend Node.js aparte,
+   monorepo) y la decisión se toma al abrirla. Hasta entonces, su
+   código no se escribe. Aplica a: backend, auth, base de datos,
+   Supabase / PocketBase / etc., comunidad, uploads, skill tree
+   visual, combo builder, PWA, cloud sync.
+9. **Toda la documentación `.md` del repo queda en español.** La app
    mantiene su interfaz bilingüe ES/EN; los archivos markdown no se
    traducen.
-9. **No agregues dependencias nuevas** sin justificar por qué son
-   necesarias. Si las añades, actualiza `README.md` (sección Stack y
-   Scripts) y `ROADMAP.md` si corresponde.
-10. **Tras cualquier cambio no trivial**, ejecuta las validaciones en
+10. **No agregues dependencias nuevas** sin justificar por qué son
+    necesarias. Si las añades, actualiza `README.md` (sección Stack y
+    Scripts) y `ROADMAP.md` si corresponde.
+11. **No uses emojis como iconos visuales** en la UI (navegación,
+    botones, cards, badges, estados, empty states, alerts, filtros,
+    progreso, fichas de truco, etc.). Usa siempre iconos de
+    **`lucide-react`**. Mapeos orientativos:
+    - candado → `Lock`
+    - check → `Check` / `CheckCircle2`
+    - búsqueda → `Search`
+    - sol / luna → `Sun` / `Moon`
+    - idioma → `Languages`
+    - progreso → `TrendingUp` / `BarChart3`
+    - alerta → `AlertTriangle`
+    - info → `Info`
+    - destacado → `Star`
+    - video / play → `Play`
+    - settings → `Settings`
+    - niveles / ranking → `Trophy` / `Medal`
+    Glifos Unicode tipo `↻ ↺ ⚡ ↗ ◯ ↔` tampoco son válidos como iconos
+    de UI: usa el componente de lucide-react correspondiente. Si falta
+    una equivalencia, consúltalo antes de añadir glifo a mano.
+12. **Toda acción del usuario que implique espera debe mostrar estado
+    de carga.** Si una interacción puede tardar (request a la red,
+    lectura/escritura de archivo, cálculo pesado, import/export, etc.),
+    la UI no puede quedarse muda. Patrones a usar:
+    - **Botón que dispara la acción**: `disabled` + `aria-busy="true"`
+      y, si aporta, un `Loader2` de `lucide-react` con `aria-hidden`.
+      Mantener el label visible para que la transición sea legible.
+    - **Operación global o puntual**: toast de `sonner` con
+      `toast.promise()` o `toast.loading()`.
+    - **Sección o página**: skeleton o spinner inline reservado en
+      layout.
+    - **Operación larga**: barra de progreso o porcentaje.
+    NUNCA dejar un botón visualmente clickable mientras la acción
+    corre: los usuarios lo pulsan varias veces y rompen el flujo.
+    Respeta `prefers-reduced-motion` (los spinners con `animate-spin`
+    ya quedan deshabilitados por la regla global de `globals.css`).
+13. **Tras cualquier cambio no trivial**, ejecuta las validaciones en
     este orden: `npm run typecheck` → `npm run lint` → `npm run build`.
     El build es la prueba más cara y la que valida el SSG completo.
 
@@ -75,9 +172,8 @@ npm run lint       # next lint (ESLint)
 npm run typecheck  # tsc --noEmit
 ```
 
-Orden de validación recomendado: **typecheck → lint → build**.
-Typecheck y lint son rápidos; `next build` es el más lento y es la
-puerta de entrada al SSG.
+El orden de validación obligatorio tras cualquier cambio no trivial
+está en la regla 13 y detallado en § Verificación.
 
 ## Gotchas aprendidos a fuerza de errores (lee antes de tocar i18n o datos)
 
@@ -110,6 +206,9 @@ puerta de entrada al SSG.
 
 ## Arquitectura
 
+El árbol completo del proyecto está en `README.md` § Estructura. Lo
+que sigue son los puntos que más mira un agente:
+
 ```
 src/
 ├── app/[locale]/          # todas las rutas viven bajo [locale]; el layout fija <html lang>
@@ -127,19 +226,17 @@ src/
 ```
 
 - **Datos del catálogo** en `src/data/tricks.ts`. Añadir un truco =
-  editar ese archivo y añadir un bloque `tricks.<id>` en
-  `messages/es.json` **y** `messages/en.json`. La UI re-deriva sola, no
-  hace falta tocar más.
+  seguir `README.md` § "Añadir un truco nuevo" (4 pasos).
 - **Disponibilidad de trucos** se calcula en
   `src/data/relations.ts:computeAvailability` a partir de los
-  prerequisitos y el estado persistido.
+  prerequisitos y el estado persistido. Reglas detalladas en
+  `README.md` § Modelo de datos.
   Estados: `locked`, `available`, `learning`, `mastered`.
 - **`generateStaticParams` en `/tricks/[slug]`** enumera los 28
   trucos. Tras editar el catálogo, vuelve a correr `npm run build`
   para refrescar las páginas estáticas.
 - **Sin backend, sin auth, sin DB.** El progreso se exporta/importa
-  como JSON (blob + `<input type="file">`). No añadir Supabase,
-  NextAuth ni Prisma en esta fase.
+  como JSON (blob + `<input type="file">`).
 
 ## Media
 
@@ -166,14 +263,17 @@ src/
 - Esa misma media query acorta todas las transiciones a 0.01 ms, lo
   que en la práctica desactiva el autoplay de video. Si añades lógica
   de autoplay, condicionala a la media query.
+- Para botones con estado de carga, usar `Loader2` de `lucide-react`
+  con `className="animate-spin"` (queda anulada bajo
+  `prefers-reduced-motion`). Mantener siempre `aria-busy` en el botón
+  para accesibilidad. La regla operativa completa vive en § Reglas
+  obligatorias.
 
 ## Lo que NO hacer (según el plan actual)
 
-- Nada de skill tree, combo builder, PWA, cloud sync, comunidad ni
-  auth. Todo está en "Fase 2" de `ROADMAP.md` — no construirlo
-  preventivamente.
-- No traducir los archivos `.md` al inglés. La documentación del repo
-  es en español por decisión del proyecto.
+- No decidir por tu cuenta la arquitectura de Fase 2 (Supabase vs
+  backend Node.js vs monorepo). Las opciones viven en `ROADMAP.md` y
+  la decisión se toma con el usuario.
 - No añadir dependencias nuevas sin actualizar `ROADMAP.md`.
 
 ## Verificación tras cualquier cambio no trivial
@@ -199,6 +299,11 @@ sesión hasta corregirlo.
 - [ ] Leí `README.md`.
 - [ ] Leí `DESIGN.md` si toqué diseño / UI / UX / estilos.
 - [ ] Leí `ROADMAP.md` si toqué fases, features o alcance.
+- [ ] Cargué las skills relevantes de `.agents/skills/` con la
+      herramienta `skill` antes de empezar.
+- [ ] Si añadí o cambié strings visibles al usuario, están en
+      `messages/es.json` **y** `messages/en.json` con misma clave,
+      mismo orden y misma estructura.
 - [ ] Actualicé `README.md` si cambió algo estructural, técnico o de
   uso.
 - [ ] Actualicé `DESIGN.md` si cambié diseño.

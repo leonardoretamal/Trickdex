@@ -2,6 +2,15 @@
 
 import * as React from "react";
 import { useTranslations } from "next-intl";
+import {
+  RotateCcw,
+  RotateCw,
+  Zap,
+  TrendingUp,
+  Circle,
+  ArrowLeftRight,
+  type LucideIcon,
+} from "lucide-react";
 import { Link } from "@/i18n/routing";
 import type { Trick, TrickStatus, TrickFamily } from "@/types";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,13 +19,13 @@ import { LevelBadge } from "./LevelBadge";
 import { StatusBadge } from "./StatusBadge";
 import { cn } from "@/lib/utils";
 
-const FAMILY_ICON: Record<TrickFamily, string> = {
-  flip: "↻",
-  twist: "↺",
-  kick: "⚡",
-  vault: "↗",
-  ground: "◯",
-  transition: "↔",
+const FAMILY_ICON: Record<TrickFamily, LucideIcon> = {
+  flip: RotateCcw,
+  twist: RotateCw,
+  kick: Zap,
+  vault: TrendingUp,
+  ground: Circle,
+  transition: ArrowLeftRight,
 };
 
 export interface TrickCardProps {
@@ -52,7 +61,10 @@ export function TrickCard({ trick, status = "available", className }: TrickCardP
             </p>
           </div>
           <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-            <span aria-hidden>{FAMILY_ICON[trick.family]}</span>
+            {(() => {
+              const FamilyIcon = FAMILY_ICON[trick.family];
+              return <FamilyIcon className="h-3 w-3" aria-hidden />;
+            })()}
             <span>{t(`families.${trick.family}` as `families.${TrickFamily}`)}</span>
             <span className="mx-1">·</span>
             <span>

@@ -50,28 +50,57 @@
 - [x] `npm run build` sin errores
 - [x] Servidor de dev arranca en `localhost:3000` y redirige a `/es`
 
-## Fase 2 — Engagement (NO incluida en el MVP)
+## Fase 2 — Engagement (opciones bajo evaluación, NO iniciada)
 
-> Estas ideas están en la lista de espera. No se implementan en esta fase.
-> Cualquier avance aquí debe documentarse en `ROADMAP.md` y, si afecta al
-> diseño, en `DESIGN.md`.
+> Fase 2 todavía **no está definida**: son ideas y opciones que se
+> están sopesando. Mientras Fase 1 siga activa, **no se escribe código
+> de Fase 2** sin instrucción explícita del usuario. Cualquier avance
+> aquí debe documentarse en `ROADMAP.md` y, si afecta al diseño, en
+> `DESIGN.md`.
+>
+> En el momento en que se abra Fase 2, las skills de backend
+> (`nodejs-backend-patterns`, `nodejs-best-practices`) — que ya viven
+> en `.agents/skills/` — pasarán de «carga futura» a obligatorias.
 
+### Opciones de arquitectura (a decidir al abrir Fase 2)
+
+| # | Arquitectura | Pros | Contras |
+|---|--------------|------|---------|
+| **A** | **Next.js + Supabase en este mismo repo** (recomendada) | Un solo repo, un solo deploy (Vercel), DB+Auth+Storage+Realtime ya gestionados, free tier generoso, ideal para un dev solo y datos pequeños. Migrable luego. | Acoplado al proveedor; lógica servidor compleja se delega a Edge Functions o se reescribe después. |
+| B | Next.js (este repo) + backend Node.js aparte (otro repo) | Máximo control, lógica servidor propia, sin dependencia de BaaS. | Dos repos, dos deploys, más boilerplate, sobredimensionado para el MVP. |
+| C | Monorepo (turborepo / npm workspaces) con `apps/web` (Next.js) + `apps/api` (Node.js) | Todo en un repo, type-sharing entre front y back, CI unificado. | Complejidad de tooling sin beneficio claro para un dev solo; suma fricción al MVP. |
+
+> **Default recomendado: opción A.** Se revisa si en el futuro surge
+> necesidad real de lógica servidor que Supabase no cubra bien
+> (jobs pesados, integraciones con terceros, ML, etc.). En ese
+> momento se valora migrar a B o C.
+
+### Features (ideas, no comprometidas)
+
+- [ ] Sincronización opcional del progreso con backend (sustituye el
+      import/export JSON actual)
+- [ ] Auth (Supabase Auth, NextAuth u otro, según arquitectura)
+- [ ] Base de datos para cuentas, progreso y, eventualmente, comunidad
+- [ ] Subida de clips por el usuario (Cloudinary / R2 / Supabase
+      Storage según arquitectura)
 - [ ] Árbol visual de skills (graph) con React Flow o d3
 - [ ] Constructor de combos y rutinas con drag & drop
-- [ ] PWA + soporte offline
-- [ ] Sincronización opcional del progreso con backend (Supabase, PocketBase, etc.)
 - [ ] Búsqueda fuzzy con Fuse.js o similar
 - [ ] Soporte real de clips en `.webm`/`.mp4` (reemplazar placeholders)
 - [ ] Animaciones de desbloqueo de trucos (confeti, glow, etc.)
 - [ ] Vista comparativa de dos trucos lado a lado
 - [ ] Reseñas y comentarios por truco
-- [ ] Autenticación (NextAuth o similar)
 - [ ] Comunidad y feed social
-- [ ] Subida de clips por el usuario (Cloudinary / R2)
 - [ ] Compartir rutinas como enlace público
+- [ ] PWA + soporte offline
 
 ## Cambios recientes
 
+- **v0.2 — Fase 2 replanteada**: se quita el tono «confirmada» y
+  vuelve a «opciones bajo evaluación». Se documentan tres
+  arquitecturas posibles (A: Next.js + Supabase en este repo,
+  recomendada; B: backend Node.js aparte; C: monorepo) para que la
+  decisión se tome al abrir Fase 2.
 - **v0.1 — MVP base**: scaffold completo, store de progreso, i18n, dark/light,
   8 niveles, 28 trucos seed, páginas de roadmap, catálogo, ficha, progreso y
   about, con DESIGN.md y ROADMAP.md en español.

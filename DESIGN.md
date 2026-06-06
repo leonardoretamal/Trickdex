@@ -170,8 +170,15 @@ L8  hsl(280, 85%, 60%)  violeta
 - 16 px: UI general.
 - 20–24 px: CTA y cards.
 
-Nunca mezclar familias. El glifo `↻ ↺ ⚡ ↗ ◯ ↔` se usa como fallback
-tipográfico de `TrickCard` cuando no hay icono de familia asignado.
+La identidad visual usa exclusivamente iconos lineales de `lucide-react`
+y **evita los emojis como recurso visual** en cualquier parte de la UI
+(navegación, botones, cards, badges, estados, empty states, alertas,
+filtros, progreso, fichas de truco). Tampoco se usan glifos Unicode
+tipo `↻ ↺ ⚡ ↗ ◯ ↔` como iconos: todo pasa por un componente de
+`lucide-react` con tamaño explícito. Si un caso no tiene equivalencia
+clara, se discute antes de añadir glifo a mano. La regla operativa
+completa (mapeos por dominio) vive en `AGENTS.md`, § Reglas
+obligatorias.
 
 ## 6. Voz y tono (UI en pantalla)
 
@@ -199,9 +206,9 @@ Evitar:
   redirige `/` → `/es`.
 - Mensajes en `messages/es.json` y `messages/en.json`. Mismas claves, mismo
   orden de claves.
-- Textos visibles siempre vía `useTranslations` (cliente) o
-  `getTranslations` (servidor). Nunca hardcoded en JSX.
 - `LocaleSwitcher` preserva la ruta actual y consulta el locale activo.
+- Las reglas de paridad y contrato de nuevos strings viven en
+  `AGENTS.md`, sección `i18n` (bilingüe ES/EN).
 
 ## 8. Tema dark / light
 

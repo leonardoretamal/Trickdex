@@ -5,10 +5,9 @@
 > hasta las combinaciones más complejas. Marca tu progreso localmente,
 > descubre prerequisitos, entradas y salidas, y vuelve cuando quieras.
 
-> 🇪🇸 La app está traducida al **español** y al **inglés** desde el primer
-> día. Este README y el resto de la documentación del repositorio están
-> escritos **en español** por decisión del proyecto. La interfaz puede
-> alternar entre ambos idiomas con el selector del header.
+La app es bilingüe **español / inglés** (ver `AGENTS.md` § i18n y
+`DESIGN.md` § 7); la documentación de este repo está en español por
+decisión del proyecto.
 
 ---
 
@@ -43,8 +42,9 @@
 | Toasts | [sonner](https://sonner.emilkowal.ski) |
 | Deploy objetivo | [Vercel](https://vercel.com) (free tier) |
 
-No hay backend, no hay base de datos, no hay auth. Todo el progreso vive
-en el navegador del usuario y se puede exportar/importar como JSON.
+El progreso vive en `localStorage` y se exporta/importa como JSON. No
+hay backend, auth ni DB en esta fase (ver `ROADMAP.md` § Fase 2 para
+las opciones de arquitectura pendientes).
 
 ---
 
@@ -78,8 +78,11 @@ npm run typecheck
 
 ```
 tricking-roadmap/
+├── .agents/
+│   └── skills/               # skills de OpenCode (next, react, tailwind, etc.)
 ├── DESIGN.md                 # sistema de diseño (tokens, componentes, voz)
 ├── ROADMAP.md                # fases y entregables, con checkboxes
+├── AGENTS.md                 # reglas obligatorias para agentes IA
 ├── README.md                 # este archivo
 ├── messages/
 │   ├── es.json               # strings ES
@@ -169,12 +172,15 @@ Reglas de disponibilidad (en `src/data/relations.ts`):
 ## i18n y tema
 
 - **Idiomas**: `es` (default) y `en`. Activados en `src/i18n/routing.ts`.
+  La política de paridad (claves espejo, ICU, fallback de `tips`, etc.)
+  está en `AGENTS.md` § i18n.
 - **Rutas**: siempre con prefijo de locale. El middleware redirige `/` a
   `/es` y preserva la ruta al cambiar idioma.
 - **Strings**: en `messages/{es,en}.json`. Mismas claves, mismo orden.
 - **Tema**: `next-themes` con estrategia `class` en `<html>`. Tres
   opciones (claro, oscuro, sistema). La preferencia se guarda en
   `localStorage` y respeta `prefers-color-scheme` en la primera visita.
+  Detalle visual en `DESIGN.md` § 8.
 
 Para añadir un nuevo idioma, sigue los pasos documentados en
 `DESIGN.md` § 12.
@@ -205,9 +211,10 @@ Para añadir un nuevo idioma, sigue los pasos documentados en
 
 ## Variables de entorno
 
-No hay variables de entorno obligatorias. La app es 100% estática y no
-realiza llamadas externas. Si en el futuro necesitas claves para
-analítica o un CMS, documenta aquí los nombres exactos.
+No hay variables de entorno obligatorias en el MVP. La app es 100%
+estática y no realiza llamadas externas. Cuando en Fase 2 se introduzca
+backend o servicios gestionados, documentar aquí los nombres exactos y
+los pasos de configuración.
 
 ---
 
@@ -232,13 +239,16 @@ fases:
 - **Fase 1 — MVP base**: scaffold, i18n, tema, catálogo, ficha, progreso
   local, dark/light, DESIGN.md, ROADMAP.md y este README. **En curso**.
 - **Fase 2 — Engagement**: skill tree visual, combos, PWA, sync en la
-  nube, comunidad. **No se implementa en el MVP**.
+  nube, comunidad. **No se implementa en el MVP**. La arquitectura
+  (Supabase, backend Node.js aparte, monorepo) está como opciones
+  bajo evaluación en `ROADMAP.md`; la decisión se toma al abrir
+  Fase 2.
 
 ---
 
 ## Créditos y licencia
 
-- Diseño y código: construido con cariño por la comunidad de tricking.
+- Diseño y código: hecho con cariño por b0nfire.
 - Iconos: [lucide](https://lucide.dev), ISC.
 - UI patterns: [shadcn/ui](https://ui.shadcn.com), MIT.
 - License: MIT (a confirmar antes del primer release público).
