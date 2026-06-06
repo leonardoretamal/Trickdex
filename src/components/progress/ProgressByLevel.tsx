@@ -2,16 +2,13 @@
 
 import * as React from "react";
 import { useTranslations } from "next-intl";
-import { Sparkles, CheckCircle2, Hammer, Target } from "lucide-react";
 import { useProgressStore, useIsHydrated } from "@/stores/progressStore";
 import { tricks, getTricksByLevel } from "@/data/tricks";
 import { computeAvailability } from "@/data/relations";
 import type { TrickStatus } from "@/types";
-import { cn } from "@/lib/utils";
 
 export function ProgressByLevel() {
   const t = useTranslations("levels");
-  const tProgress = useTranslations("progress");
   const hydrated = useIsHydrated();
   const raw = useProgressStore((s) => s.status);
 

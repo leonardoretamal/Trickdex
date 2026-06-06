@@ -10,10 +10,17 @@ export interface MediaPreviewProps {
   className?: string;
 }
 
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+
 /**
  * Renderiza un preview en loop. Prefiere webm, fallback mp4, y siempre muestra
  * un poster cuando esté disponible. Si no hay video, muestra el poster como
  * placeholder.
+ *
+ * Respeta `prefers-reduced-motion`: cuando el usuario pide reducir
+ * movimiento, el video no se reproduce automáticamente (se queda en el
+ * poster, con el usuario decidiendo si darle a play). El `globals.css`
+ * ya acorta las transiciones CSS; este ajuste cubre el autoplay HTML.
  */
 export function MediaPreview({ media, alt, className }: MediaPreviewProps) {
   const webm = media.find((m) => m.kind === "webm");
@@ -25,6 +32,19 @@ export function MediaPreview({ media, alt, className }: MediaPreviewProps) {
   const sources: { type: string; src: string }[] = [];
   if (webm) sources.push({ type: "video/webm", src: webm.src });
   if (mp4) sources.push({ type: "video/mp4", src: mp4.src });
+
+  const [reducedMotion, setReducedMotion] = React.useState<boolean | null>(
+    null
+  );
+
+  React.useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mql = window.matchMedia(REDUCED_MOTION_QUERY);
+    setReducedMotion(mql.matches);
+    const onChange = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
 
   if (!hasVideo && !gif && !poster) {
     return (
@@ -53,13 +73,15 @@ export function MediaPreview({ media, alt, className }: MediaPreviewProps) {
     );
   }
 
+  const shouldAutoplay = reducedMotion === false;
+
   return (
     <video
       className={cn(
         "aspect-video w-full rounded-md object-cover bg-muted",
         className
       )}
-      autoPlay
+      autoPlay={shouldAutoplay}
       loop
       muted
       playsInline

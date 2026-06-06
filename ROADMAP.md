@@ -14,7 +14,7 @@
 - [x] Crear `src/middleware.ts` y `src/i18n/{routing,request}.ts`
 - [x] Definir tipos en `src/types/index.ts` (`Trick`, `Level`, `TrickStatus`, etc.)
 - [x] Crear `src/data/levels.ts` con 8 niveles y sus tokens
-- [x] Crear `src/data/tricks.ts` con seed de catálogo (~30 trucos)
+- [x] Crear `src/data/tricks.ts` con seed de catálogo (28 trucos)
 - [x] Crear `src/data/relations.ts` con `computeAvailability`
 - [x] Crear `messages/es.json` y `messages/en.json` con namespaces
 - [x] Implementar store Zustand con `persist` en `localStorage` (`trickdex-progress`)

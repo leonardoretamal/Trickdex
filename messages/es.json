@@ -417,7 +417,8 @@
     "addNote": "Añade una nota personal",
     "notePlaceholder": "Por ejemplo: 'caer con rodillas flexionadas', 'en colchoneta, sin dolor'…",
     "saveNote": "Guardar nota",
-    "backToTrick": "Volver al truco"
+    "backToTrick": "Volver al truco",
+    "tip": "Consejo"
   },
   "catalog": {
     "title": "Catálogo de trucos",

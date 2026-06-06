@@ -108,7 +108,7 @@ export function TrickDetail({ trick }: TrickDetailProps) {
               {tips && (
                 <div className="rounded-md border border-primary/20 bg-primary/5 p-3 text-foreground">
                   <p className="text-xs font-semibold uppercase tracking-wide text-primary">
-                    Tip
+                    {tPage("tip")}
                   </p>
                   <p className="mt-1">{tips}</p>
                 </div>

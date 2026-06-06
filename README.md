@@ -121,8 +121,6 @@ tricking-roadmap/
 │   │   └── slug.ts
 │   ├── stores/
 │   │   └── progressStore.ts              # Zustand + persist
-│   ├── styles/
-│   │   └── tokens.css
 │   ├── types/
 │   │   └── index.ts
 │   └── middleware.ts

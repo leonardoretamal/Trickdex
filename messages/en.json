@@ -417,7 +417,8 @@
     "addNote": "Add a personal note",
     "notePlaceholder": "For example: 'land with bent knees', 'on mat, no pain'…",
     "saveNote": "Save note",
-    "backToTrick": "Back to trick"
+    "backToTrick": "Back to trick",
+    "tip": "Tip"
   },
   "catalog": {
     "title": "Trick catalog",

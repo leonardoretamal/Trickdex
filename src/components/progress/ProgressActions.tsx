@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
-import { Download, Upload, RotateCcw } from "lucide-react";
+import { Download, Upload, RotateCcw, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -26,8 +26,12 @@ export function ProgressActions() {
   const reset = useProgressStore((s) => s.reset);
 
   const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const [isExporting, setIsExporting] = React.useState(false);
+  const [isImporting, setIsImporting] = React.useState(false);
 
-  const handleExport = () => {
+  const handleExport = async () => {
+    if (isExporting) return;
+    setIsExporting(true);
     try {
       const json = exportJSON();
       const blob = new Blob([json], { type: "application/json" });
@@ -42,25 +46,33 @@ export function ProgressActions() {
       toast.success(t("exported"));
     } catch {
       toast.error(t("importedError"));
+    } finally {
+      setIsExporting(false);
     }
   };
 
   const handleImportClick = () => {
+    if (isImporting) return;
     fileInputRef.current?.click();
   };
 
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    const text = await file.text();
-    const ok = importJSON(text);
-    if (ok) {
-      toast.success(t("imported"));
-    } else {
-      toast.error(t("importedError"));
+    setIsImporting(true);
+    try {
+      const text = await file.text();
+      const ok = importJSON(text);
+      if (ok) {
+        toast.success(t("imported"));
+      } else {
+        toast.error(t("importedError"));
+      }
+    } finally {
+      setIsImporting(false);
+      // Reset input para permitir reimportar el mismo archivo
+      e.target.value = "";
     }
-    // Reset input para permitir reimportar el mismo archivo
-    e.target.value = "";
   };
 
   const handleReset = () => {
@@ -79,8 +91,17 @@ export function ProgressActions() {
             <p className="font-medium">{t("exportTitle")}</p>
             <p className="text-sm text-muted-foreground">{t("exportDesc")}</p>
           </div>
-          <Button variant="outline" onClick={handleExport}>
-            <Download className="mr-2 h-4 w-4" />
+          <Button
+            variant="outline"
+            onClick={handleExport}
+            disabled={isExporting}
+            aria-busy={isExporting}
+          >
+            {isExporting ? (
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />
+            ) : (
+              <Download className="mr-2 h-4 w-4" />
+            )}
             {t("exportButton")}
           </Button>
         </div>
@@ -98,9 +119,19 @@ export function ProgressActions() {
             accept="application/json"
             className="hidden"
             onChange={handleFile}
+            disabled={isImporting}
           />
-          <Button variant="outline" onClick={handleImportClick}>
-            <Upload className="mr-2 h-4 w-4" />
+          <Button
+            variant="outline"
+            onClick={handleImportClick}
+            disabled={isImporting}
+            aria-busy={isImporting}
+          >
+            {isImporting ? (
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />
+            ) : (
+              <Upload className="mr-2 h-4 w-4" />
+            )}
             {t("importButton")}
           </Button>
         </div>
