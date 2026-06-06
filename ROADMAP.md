@@ -42,6 +42,10 @@
 - [x] Escribir `ROADMAP.md` (este archivo)
 - [x] Escribir `README.md` en español con quickstart, estructura y guía para contributors
 - [x] `git init`, primer commit y configuración de `.gitignore`
+- [x] Ampliar L1 con rolls, handstand, cartwheel, round-off, bounce y tuck-jump (+7 trucos, L1 pasa de 4 a 11)
+- [x] Crear 11 thumbnails SVG propios para L1 en `public/media/thumbs/` y enlazarlos desde el catálogo
+- [x] Bloquear los botones de progreso cuando el truco está en `locked` y deshabilitar la opción `locked` del radiogroup
+- [x] Indicador de opción activa en el selector de tema (`Check` + `aria-checked`)
 
 ### Pendiente de validar
 
@@ -96,6 +100,19 @@
 
 ## Cambios recientes
 
+- **v0.4 — UX y assets**: 11 thumbnails SVG propios para L1
+  (uno por truco, en `public/media/thumbs/`), enlazados desde el
+  catálogo. El selector de tema ahora marca la opción activa con
+  `Check` + `aria-checked`. En la ficha de truco, los botones de
+  progreso se deshabilitan cuando el truco está en `locked` y la
+  opción `locked` del radiogroup se deshabilita siempre (es un
+  estado derivado, no fijable). Sin cambios en L2+ ni en tipos.
+- **v0.3 — L1 ampliado**: se añaden 7 trucos nuevos a Fundamentos
+  (forward-roll, backward-roll, handstand, cartwheel, round-off, bounce,
+  tuck-jump) más sus 9 variaciones. L1 pasa de 4 a 11 trucos; el catálogo
+  total pasa de 28 a 35. Se actualiza `levels.1.description` en ES y EN
+  para reflejar el alcance del nivel. Sin cambios en L2+, sin cambios
+  en tipos, componentes, ni páginas.
 - **v0.2 — Fase 2 replanteada**: se quita el tono «confirmada» y
   vuelve a «opciones bajo evaluación». Se documentan tres
   arquitecturas posibles (A: Next.js + Supabase en este repo,

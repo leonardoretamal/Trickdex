@@ -242,6 +242,26 @@ fases:
   bajo evaluación en `ROADMAP.md`; la decisión se toma al abrir
   Fase 2.
 
+## Historial
+
+- **v0.4** — UX y assets: 11 thumbnails SVG propios para L1 (uno
+  por truco, en `public/media/thumbs/`), enlazados desde el
+  catálogo. El selector de tema marca la opción activa con
+  `Check` + `aria-checked`. En la ficha de truco, los botones de
+  progreso se deshabilitan cuando el truco está en `locked` y la
+  opción `locked` del radiogroup se deshabilita siempre.
+  Detalle en `ROADMAP.md`.
+- **v0.3** — Se ampla L1 Fundamentos con movimientos base reales
+  de tricking: rolls, handstand, cartwheel, round-off, bounce y
+  saltos con tuck. Sin cambios en L2+ ni en tipos, componentes o
+  páginas. Catálogo en `src/data/tricks.ts`; detalle del cambio en
+  `ROADMAP.md` § Cambios recientes.
+- **v0.2** — Replanteamiento de Fase 2: pasa a opciones bajo
+  evaluación (Supabase en este repo, backend Node.js aparte, o
+  monorepo).
+- **v0.1** — MVP base: scaffold, i18n, tema, catálogo, ficha,
+  progreso local, dark/light, DESIGN.md, ROADMAP.md.
+
 ---
 
 ## Créditos y licencia

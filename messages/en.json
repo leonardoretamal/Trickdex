@@ -21,7 +21,8 @@
     "theme": "Theme",
     "themeLight": "Light",
     "themeDark": "Dark",
-    "themeSystem": "System"
+    "themeSystem": "System",
+    "active": "active"
   },
   "nav": {
     "home": "Home",
@@ -49,7 +50,7 @@
   "levels": {
     "1": {
       "title": "Fundamentals",
-      "description": "Stance, straight jump, frog jump and guard. The foundation everything else needs."
+      "description": "Stance, straight jump, frog jump, guard, rolls, handstand, cartwheel, round-off, bounce and tuck jumps. All on the floor or mat, no high fall risk. The foundation everything else needs."
     },
     "2": {
       "title": "Air foundations",
@@ -143,6 +144,93 @@
       "name": "Sweep guard",
       "short": "Variant with low sweep",
       "description": "Guard variant with a low sweep included."
+    },
+    "forward-roll": {
+      "name": "Forward roll",
+      "short": "Forward roll",
+      "description": "Forward roll from stance, chin tucked, rounded back and hands protecting the neck. It's the safe base for any front landing and for all rotations.",
+      "tips": "Round your back, don't force it straight. Chin to chest protects the neck."
+    },
+    "shoulder-roll": {
+      "name": "Shoulder roll",
+      "short": "Shoulder-based variant",
+      "description": "Forward roll variant rolling over one shoulder, ideal to prepare lateral entries into flips."
+    },
+    "backward-roll": {
+      "name": "Backward roll",
+      "short": "Backward roll",
+      "description": "Backward roll with legs going over, hips high and hands planting beside you to push the floor. You learn to roll over the spine without impact.",
+      "tips": "Knees to chest, eyes to belly button. The squat is the starting point, not the end."
+    },
+    "handstand": {
+      "name": "Handstand",
+      "short": "Handstand",
+      "description": "Handstand with hands on the floor: aligned body, hands shoulder-width apart, fingers spread. Start against a wall and progress to freestanding.",
+      "tips": "Push the floor away, bring shoulders over the wrists. The vertical line is earned with practice, not brute force."
+    },
+    "handstand-wall": {
+      "name": "Wall handstand",
+      "short": "Wall-supported variant",
+      "description": "Handstand variant with feet against the wall to train the vertical line and shoulder strength."
+    },
+    "handstand-free": {
+      "name": "Freestanding handstand",
+      "short": "Unsupported variant",
+      "description": "Handstand variant in freestanding balance, with no contact with the wall."
+    },
+    "cartwheel": {
+      "name": "Cartwheel",
+      "short": "Cartwheel",
+      "description": "Lateral rotation with hands and feet planting on the floor one after the other. You train inverted balance, coordination and line.",
+      "tips": "The first hand sets the direction. Hips up, head neutral, second leg long."
+    },
+    "cartwheel-step-out": {
+      "name": "Cartwheel step out",
+      "short": "Variant with step landing",
+      "description": "Cartwheel with a step landing instead of stopping, useful to chain with a run or pop."
+    },
+    "round-off": {
+      "name": "Round off",
+      "short": "Lateral exit with both feet",
+      "description": "Like a cartwheel, but you finish with both feet together facing forward, ready to jump or run. It's the natural hinge to front flips and twists.",
+      "tips": "Block with the last hand, snap the hips. The controlled exit is half the trick."
+    },
+    "round-off-step-out": {
+      "name": "Round off step out",
+      "short": "Variant with step landing",
+      "description": "Round off with a step landing, ideal to connect directly with another trick."
+    },
+    "bounce": {
+      "name": "Bounce",
+      "short": "Tricking bounce",
+      "description": "Two-legged jump reused to chain tricks. The body goes up and down on the spot, keeping direction and tempo. It's the heartbeat of tricking.",
+      "tips": "Springy legs, short arm swing. Train the bounce in sets, not in single jumps."
+    },
+    "tuck-bounce": {
+      "name": "Tuck bounce",
+      "short": "Bounce with knees to chest",
+      "description": "Bounce variant bringing the knees to the chest on every jump."
+    },
+    "pike-bounce": {
+      "name": "Pike bounce",
+      "short": "Bounce with straight legs",
+      "description": "Bounce variant with straight legs in pike position."
+    },
+    "tuck-jump": {
+      "name": "Tuck jump",
+      "short": "Jump with knees to chest",
+      "description": "Vertical jump bringing both knees to the chest in the air. You train the tuck position, which gives rotation speed in flips.",
+      "tips": "Grab the knees as you go up. If the legs don't reach, jump higher, don't tuck less."
+    },
+    "pike-jump": {
+      "name": "Pike jump",
+      "short": "Variant with straight legs",
+      "description": "Tuck jump variant with straight legs in a V."
+    },
+    "straddle-jump": {
+      "name": "Straddle jump",
+      "short": "Variant with open legs",
+      "description": "Tuck jump variant with legs in straddle position."
     },
     "pop-180": {
       "name": "Pop 180",
@@ -418,7 +506,8 @@
     "notePlaceholder": "For example: 'land with bent knees', 'on mat, no pain'…",
     "saveNote": "Save note",
     "backToTrick": "Back to trick",
-    "tip": "Tip"
+    "tip": "Tip",
+    "lockedHint": "This status is calculated automatically from the prerequisites."
   },
   "catalog": {
     "title": "Trick catalog",

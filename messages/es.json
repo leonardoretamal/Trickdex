@@ -21,7 +21,8 @@
     "theme": "Tema",
     "themeLight": "Claro",
     "themeDark": "Oscuro",
-    "themeSystem": "Sistema"
+    "themeSystem": "Sistema",
+    "active": "activo"
   },
   "nav": {
     "home": "Inicio",
@@ -49,7 +50,7 @@
   "levels": {
     "1": {
       "title": "Fundamentos",
-      "description": "Postura, salto vertical, salto de rana y guardia. La base que todo lo demás necesita."
+      "description": "Stance, salto vertical, salto de rana, guardia, rolls, handstand, cartwheel, round-off, bounce y saltos con tuck. Todo en suelo o colchoneta, sin riesgo de caída alta. La base que todo lo demás necesita."
     },
     "2": {
       "title": "Bases aéreas",
@@ -143,6 +144,93 @@
       "name": "Barrido en guardia",
       "short": "Variante con barrido bajo",
       "description": "Variante de guardia con un barrido bajo incluido."
+    },
+    "forward-roll": {
+      "name": "Voltereta adelante",
+      "short": "Rodada hacia delante",
+      "description": "Rodada hacia delante desde stance, mentón al pecho, espalda redondeada y manos que protegen la nuca. Es la base segura para cualquier aterrizaje frontal y para todas las volteretas.",
+      "tips": "Redondea la espalda, no la fuerces recta. La barbilla al pecho protege el cuello."
+    },
+    "shoulder-roll": {
+      "name": "Voltereta al hombro",
+      "short": "Variante por el hombro",
+      "description": "Variante de la voltereta adelante rodando por un hombro, ideal para preparar entradas laterales a flips."
+    },
+    "backward-roll": {
+      "name": "Voltereta atrás",
+      "short": "Rodada hacia atrás",
+      "description": "Rodada hacia atrás con piernas que pasan por encima, cadera alta y manos que se plantan a los lados para empujar el suelo. Aprendes a rodar sobre la columna sin impacto.",
+      "tips": "Rodilla al pecho, mirada al ombligo. La sentada es el punto de partida, no el final."
+    },
+    "handstand": {
+      "name": "Parada de manos",
+      "short": "Handstand",
+      "description": "Parada de manos con apoyo en el suelo: cuerpo alineado, manos a la anchura de los hombros, dedos abiertos. Puedes empezar contra la pared y progresar a libre.",
+      "tips": "Empuja el suelo lejos, lleva los hombros sobre las muñecas. La vertical se gana con práctica, no con fuerza bruta."
+    },
+    "handstand-wall": {
+      "name": "Handstand en pared",
+      "short": "Variante con apoyo en pared",
+      "description": "Variante del handstand con los pies contra la pared para trabajar la vertical y la fuerza de hombros."
+    },
+    "handstand-free": {
+      "name": "Handstand libre",
+      "short": "Variante sin apoyo",
+      "description": "Variante del handstand en equilibrio libre, sin contacto con la pared."
+    },
+    "cartwheel": {
+      "name": "Rueda lateral",
+      "short": "Cartwheel",
+      "description": "Rotación lateral con manos y pies que se van plantando en el suelo uno tras otro. Trabajas el equilibrio invertido, la coordinación y la línea.",
+      "tips": "La primera mano marca la dirección. Caderas arriba, cabeza neutra, segunda pierna larga."
+    },
+    "cartwheel-step-out": {
+      "name": "Cartwheel con salida",
+      "short": "Variante con salida en paso",
+      "description": "Cartwheel con aterrizaje en paso en lugar de parado, útil para encadenar con carrera o pop."
+    },
+    "round-off": {
+      "name": "Round off",
+      "short": "Salida lateral con dos pies",
+      "description": "Como la rueda lateral, pero terminas con los dos pies juntos mirando al frente, listo para saltar o correr. Es la bisagra natural hacia los flips frontales y los twists.",
+      "tips": "Bloquea la última mano, estira las caderas. La salida controlada es la mitad del truco."
+    },
+    "round-off-step-out": {
+      "name": "Round off con salida",
+      "short": "Variante con salida en paso",
+      "description": "Round off con salida en paso, ideal para conectar directamente con otro truco."
+    },
+    "bounce": {
+      "name": "Rebote",
+      "short": "Bounce de tricking",
+      "description": "Salto desde dos piernas que se reutiliza para encadenar trucos. El cuerpo sube y baja en el sitio, manteniendo la dirección y el tempo. Es el latido del tricking.",
+      "tips": "Piernas elásticas, brazos cortos. El rebote se entrena en series, no en un solo salto."
+    },
+    "tuck-bounce": {
+      "name": "Bounce tuck",
+      "short": "Rebote con rodillas al pecho",
+      "description": "Variante del rebote llevando las rodillas al pecho en cada salto."
+    },
+    "pike-bounce": {
+      "name": "Bounce pike",
+      "short": "Rebote con piernas rectas",
+      "description": "Variante del rebote con piernas rectas en posición de pike."
+    },
+    "tuck-jump": {
+      "name": "Salto tuck",
+      "short": "Salto con rodillas al pecho",
+      "description": "Salto vertical llevando las dos rodillas al pecho en el aire. Trabajas la posición agrupada, que es la que da velocidad de rotación en los flips.",
+      "tips": "Agarra las rodillas al subir. Si las piernas no llegan, sube más el salto, no dobles menos."
+    },
+    "pike-jump": {
+      "name": "Salto pike",
+      "short": "Variante con piernas rectas",
+      "description": "Variante del tuck jump con piernas rectas en V."
+    },
+    "straddle-jump": {
+      "name": "Salto straddle",
+      "short": "Variante con piernas abiertas",
+      "description": "Variante del tuck jump con piernas abiertas en straddle."
     },
     "pop-180": {
       "name": "Pop 180",
@@ -418,7 +506,8 @@
     "notePlaceholder": "Por ejemplo: 'caer con rodillas flexionadas', 'en colchoneta, sin dolor'…",
     "saveNote": "Guardar nota",
     "backToTrick": "Volver al truco",
-    "tip": "Consejo"
+    "tip": "Consejo",
+    "lockedHint": "Este estado se calcula automáticamente a partir de los prerequisitos."
   },
   "catalog": {
     "title": "Catálogo de trucos",
