@@ -1,0 +1,463 @@
+import type { Trick } from "@/types";
+
+export const tricks: Trick[] = [
+  // L1 â€” Fundamentos
+  {
+    id: "stance",
+    slug: "stance",
+    level: 1,
+    family: "ground",
+    i18nKey: "tricks.stance",
+    prerequisites: [],
+    variations: ["fighting-stance", "ready-stance"],
+    entries: [],
+    exits: ["straight-jump"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Postura base" },
+    ],
+    difficulty: 1,
+    tags: ["base"],
+  },
+  {
+    id: "straight-jump",
+    slug: "straight-jump",
+    level: 1,
+    family: "vault",
+    i18nKey: "tricks.straight-jump",
+    prerequisites: ["stance"],
+    variations: ["tuck-straight-jump"],
+    entries: ["stance", "running"],
+    exits: ["landing", "pop-180"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Salto vertical" },
+    ],
+    difficulty: 1,
+  },
+  {
+    id: "frog-jump",
+    slug: "frog-jump",
+    level: 1,
+    family: "vault",
+    i18nKey: "tricks.frog-jump",
+    prerequisites: ["stance", "straight-jump"],
+    variations: ["baby-frog"],
+    entries: ["stance"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Salto de rana" },
+    ],
+    difficulty: 1,
+  },
+  {
+    id: "guard",
+    slug: "guard",
+    level: 1,
+    family: "ground",
+    i18nKey: "tricks.guard",
+    prerequisites: [],
+    variations: ["sweep-guard"],
+    entries: [],
+    exits: ["round-kick", "hook-kick"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Guardia" },
+    ],
+    difficulty: 1,
+    tags: ["defense"],
+  },
+
+  // L2 â€” Bases aÃ©reas
+  {
+    id: "pop-180",
+    slug: "pop-180",
+    level: 2,
+    family: "twist",
+    i18nKey: "tricks.pop-180",
+    prerequisites: ["straight-jump"],
+    variations: ["pop-180-step-out"],
+    entries: ["running", "straight-jump"],
+    exits: ["landing", "front-tuck"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Pop 180" },
+    ],
+    difficulty: 2,
+  },
+  {
+    id: "front-tuck",
+    slug: "front-tuck",
+    level: 2,
+    family: "flip",
+    i18nKey: "tricks.front-tuck",
+    prerequisites: ["straight-jump", "frog-jump"],
+    variations: ["front-pike", "front-straddle"],
+    entries: ["pop-180", "running"],
+    exits: ["landing", "butterfly-kick"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Vuelta de frente agrupada" },
+    ],
+    difficulty: 2,
+  },
+  {
+    id: "back-tuck",
+    slug: "back-tuck",
+    level: 2,
+    family: "flip",
+    i18nKey: "tricks.back-tuck",
+    prerequisites: ["straight-jump", "frog-jump"],
+    variations: ["back-pike", "back-layout"],
+    entries: ["pop-180", "running"],
+    exits: ["landing", "gainer"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Vuelta de atrÃ¡s agrupada" },
+    ],
+    difficulty: 3,
+  },
+
+  // L3 â€” Volteretas
+  {
+    id: "front-flip",
+    slug: "front-flip",
+    level: 3,
+    family: "flip",
+    i18nKey: "tricks.front-flip",
+    prerequisites: ["front-tuck", "pop-180"],
+    variations: ["front-flip-step-out"],
+    entries: ["running", "pop-180"],
+    exits: ["landing", "butterfly-twist"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Front flip" },
+    ],
+    difficulty: 3,
+  },
+  {
+    id: "backflip",
+    slug: "backflip",
+    level: 3,
+    family: "flip",
+    i18nKey: "tricks.backflip",
+    prerequisites: ["back-tuck", "pop-180"],
+    variations: ["backflip-step-out", "arabian-backflip"],
+    entries: ["running", "pop-180"],
+    exits: ["landing", "gainer"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Backflip" },
+    ],
+    difficulty: 3,
+  },
+  {
+    id: "gainer",
+    slug: "gainer",
+    level: 3,
+    family: "flip",
+    i18nKey: "tricks.gainer",
+    prerequisites: ["back-tuck", "pop-180"],
+    variations: ["gainer-flip", "gainer-twist"],
+    entries: ["running"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Gainer" },
+    ],
+    difficulty: 3,
+  },
+
+  // L4 â€” Giros
+  {
+    id: "kick-360",
+    slug: "kick-360",
+    level: 4,
+    family: "twist",
+    i18nKey: "tricks.kick-360",
+    prerequisites: ["pop-180", "round-kick"],
+    variations: ["kick-540"],
+    entries: ["running", "guard"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Patada 360" },
+    ],
+    difficulty: 2,
+  },
+  {
+    id: "kick-540",
+    slug: "kick-540",
+    level: 4,
+    family: "twist",
+    i18nKey: "tricks.kick-540",
+    prerequisites: ["kick-360", "hook-kick"],
+    variations: ["kick-720"],
+    entries: ["running", "guard"],
+    exits: ["landing", "butterfly-kick"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Patada 540" },
+    ],
+    difficulty: 3,
+  },
+  {
+    id: "kick-720",
+    slug: "kick-720",
+    level: 4,
+    family: "twist",
+    i18nKey: "tricks.kick-720",
+    prerequisites: ["kick-540"],
+    variations: ["kick-900"],
+    entries: ["running", "guard"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Patada 720" },
+    ],
+    difficulty: 4,
+  },
+  {
+    id: "butterfly-kick",
+    slug: "butterfly-kick",
+    level: 4,
+    family: "kick",
+    i18nKey: "tricks.butterfly-kick",
+    prerequisites: ["back-tuck"],
+    variations: ["butterfly-twist"],
+    entries: ["running", "front-flip"],
+    exits: ["landing", "round-kick"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Butterfly kick" },
+    ],
+    difficulty: 3,
+  },
+
+  // L5 â€” Patadas aÃ©reas
+  {
+    id: "hook-kick",
+    slug: "hook-kick",
+    level: 5,
+    family: "kick",
+    i18nKey: "tricks.hook-kick",
+    prerequisites: ["guard", "pop-180"],
+    variations: ["hook-kick-twist"],
+    entries: ["running", "guard"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Hook kick" },
+    ],
+    difficulty: 2,
+  },
+  {
+    id: "round-kick",
+    slug: "round-kick",
+    level: 5,
+    family: "kick",
+    i18nKey: "tricks.round-kick",
+    prerequisites: ["guard"],
+    variations: ["round-kick-twist"],
+    entries: ["running", "guard"],
+    exits: ["landing", "hook-kick"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Round kick" },
+    ],
+    difficulty: 2,
+  },
+  {
+    id: "push-kick",
+    slug: "push-kick",
+    level: 5,
+    family: "kick",
+    i18nKey: "tricks.push-kick",
+    prerequisites: ["guard", "pop-180"],
+    variations: ["push-kick-twist"],
+    entries: ["running", "guard"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Push kick" },
+    ],
+    difficulty: 2,
+  },
+  {
+    id: "crescent-kick",
+    slug: "crescent-kick",
+    level: 5,
+    family: "kick",
+    i18nKey: "tricks.crescent-kick",
+    prerequisites: ["hook-kick", "round-kick"],
+    variations: ["crescent-twist"],
+    entries: ["running", "guard"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Crescent kick" },
+    ],
+    difficulty: 3,
+  },
+
+  // L6 â€” Combinados
+  {
+    id: "butterfly-twist",
+    slug: "butterfly-twist",
+    level: 6,
+    family: "kick",
+    i18nKey: "tricks.butterfly-twist",
+    prerequisites: ["butterfly-kick", "kick-360"],
+    variations: ["butterfly-540"],
+    entries: ["running", "front-flip"],
+    exits: ["landing", "tornado"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Butterfly twist" },
+    ],
+    difficulty: 4,
+  },
+  {
+    id: "tornado",
+    slug: "tornado",
+    level: 6,
+    family: "kick",
+    i18nKey: "tricks.tornado",
+    prerequisites: ["butterfly-twist", "kick-720"],
+    variations: ["tornado-540"],
+    entries: ["butterfly-twist"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Tornado" },
+    ],
+    difficulty: 4,
+  },
+  {
+    id: "aerial",
+    slug: "aerial",
+    level: 6,
+    family: "kick",
+    i18nKey: "tricks.aerial",
+    prerequisites: ["crescent-kick", "front-flip"],
+    variations: ["aerial-twist"],
+    entries: ["running", "crescent-kick"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Aerial" },
+    ],
+    difficulty: 4,
+  },
+
+  // L7 â€” Avanzados
+  {
+    id: "double-leg",
+    slug: "double-leg",
+    level: 7,
+    family: "flip",
+    i18nKey: "tricks.double-leg",
+    prerequisites: ["backflip", "kick-720"],
+    variations: ["double-leg-twist"],
+    entries: ["running", "gainer"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Double leg" },
+    ],
+    difficulty: 5,
+  },
+  {
+    id: "full",
+    slug: "full",
+    level: 7,
+    family: "flip",
+    i18nKey: "tricks.full",
+    prerequisites: ["backflip", "kick-360"],
+    variations: ["double-full"],
+    entries: ["running", "gainer"],
+    exits: ["landing", "aerial"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Full" },
+    ],
+    difficulty: 4,
+  },
+  {
+    id: "double-full",
+    slug: "double-full",
+    level: 7,
+    family: "flip",
+    i18nKey: "tricks.double-full",
+    prerequisites: ["full", "kick-540"],
+    variations: ["triple-full"],
+    entries: ["running", "gainer"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Double full" },
+    ],
+    difficulty: 5,
+  },
+  {
+    id: "kip-up",
+    slug: "kip-up",
+    level: 7,
+    family: "ground",
+    i18nKey: "tricks.kip-up",
+    prerequisites: ["back-tuck", "guard"],
+    variations: ["kip-up-twist"],
+    entries: ["ground"],
+    exits: ["stance", "guard"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Kip up" },
+    ],
+    difficulty: 3,
+  },
+
+  // L8 â€” Experto
+  {
+    id: "triple",
+    slug: "triple",
+    level: 8,
+    family: "flip",
+    i18nKey: "tricks.triple",
+    prerequisites: ["double-full", "double-leg"],
+    variations: [],
+    entries: ["running", "gainer"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "Triple" },
+    ],
+    difficulty: 5,
+  },
+  {
+    id: "sw-9",
+    slug: "sw-9",
+    level: 8,
+    family: "flip",
+    i18nKey: "tricks.sw-9",
+    prerequisites: ["double-full", "tornado"],
+    variations: ["sw-7", "sw-11"],
+    entries: ["tornado"],
+    exits: ["landing"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "SW9" },
+    ],
+    difficulty: 5,
+  },
+  {
+    id: "illusion-combo",
+    slug: "illusion-combo",
+    level: 8,
+    family: "transition",
+    i18nKey: "tricks.illusion-combo",
+    prerequisites: ["kip-up", "aerial", "full"],
+    variations: [],
+    entries: ["kip-up"],
+    exits: ["landing", "aerial"],
+    media: [
+      { kind: "poster", src: "/media/thumbs/placeholder.svg", alt: "IlusiÃ³n combinada" },
+    ],
+    difficulty: 5,
+  },
+];
+
+export function getTrickBySlug(slug: string): Trick | undefined {
+  return tricks.find((t) => t.slug === slug);
+}
+
+export function getTrickById(id: string): Trick | undefined {
+  return tricks.find((t) => t.id === id);
+}
+
+export function getTricksByLevel(level: number): Trick[] {
+  return tricks.filter((t) => t.level === level);
+}
+
+export function getTricksByFamily(family: string): Trick[] {
+  return tricks.filter((t) => t.family === family);
+}
+
+export function getTricksByIds(ids: string[]): Trick[] {
+  return ids
+    .map((id) => getTrickById(id))
+    .filter((t): t is Trick => t !== undefined);
+}

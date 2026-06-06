@@ -1,0 +1,483 @@
+{
+  "common": {
+    "appName": "Trickdex",
+    "tagline": "Your tricking roadmap, from zero to expert",
+    "start": "Start",
+    "explore": "Browse catalog",
+    "back": "Back",
+    "loading": "Loading…",
+    "close": "Close",
+    "open": "Open",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "reset": "Reset",
+    "export": "Export",
+    "import": "Import",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System"
+  },
+  "nav": {
+    "home": "Home",
+    "tricks": "Tricks",
+    "progress": "My progress",
+    "about": "About"
+  },
+  "home": {
+    "title": "Learn tricking, level by level",
+    "subtitle": "A clear roadmap from your first jumps to the most complex combinations. Track your progress locally and come back anytime.",
+    "ctaPrimary": "Start at level 1",
+    "ctaSecondary": "View full catalog",
+    "levelsHeading": "Roadmap by levels",
+    "tricksHeading": "Featured tricks",
+    "featuresTitle": "What you'll find",
+    "feature1Title": "Level-based catalog",
+    "feature1Desc": "Eight levels ordered by difficulty, with a description of each stage.",
+    "feature2Title": "Clear prerequisites",
+    "feature2Desc": "Each trick shows what you need to master before attempting it.",
+    "feature3Title": "Entries and exits",
+    "feature3Desc": "Learn to chain tricks with smooth transitions.",
+    "feature4Title": "Local progress",
+    "feature4Desc": "Your progress is saved on this device. No accounts, no tracking."
+  },
+  "levels": {
+    "1": {
+      "title": "Fundamentals",
+      "description": "Stance, straight jump, frog jump and guard. The foundation everything else needs."
+    },
+    "2": {
+      "title": "Air foundations",
+      "description": "Pop 180 and the first front and back tuck rotations."
+    },
+    "3": {
+      "title": "Flips",
+      "description": "Front flip, backflip and gainer. You learn to rotate and land with control."
+    },
+    "4": {
+      "title": "Spins",
+      "description": "Kick 360, 540 and 720. Horizontal rotation enters the game."
+    },
+    "5": {
+      "title": "Aerial kicks",
+      "description": "Hook, round, push and crescent. Kicks that travel through the air."
+    },
+    "6": {
+      "title": "Combos",
+      "description": "Butterfly twist, tornado and aerial. You start mixing families."
+    },
+    "7": {
+      "title": "Advanced",
+      "description": "Double leg, full, double full and kip up. Multiple rotations and explosive exits."
+    },
+    "8": {
+      "title": "Expert",
+      "description": "Triples, sw9 and illusion combinations. The highest tricking repertoire."
+    }
+  },
+  "families": {
+    "flip": "Flip",
+    "twist": "Twist",
+    "kick": "Kick",
+    "vault": "Vault",
+    "ground": "Ground",
+    "transition": "Transition"
+  },
+  "status": {
+    "locked": "Locked",
+    "available": "Available",
+    "learning": "Learning",
+    "mastered": "Mastered"
+  },
+  "tricks": {
+    "stance": {
+      "name": "Stance",
+      "short": "Basic tricking stance",
+      "description": "Relaxed combat stance: feet shoulder-width apart, knees slightly bent, weight centered. It's the starting point and the return of almost everything.",
+      "tips": "Keep your feet parallel and your gaze forward. The weight should feel light, ready to jump."
+    },
+    "fighting-stance": {
+      "name": "Fighting stance",
+      "short": "Variant with lead foot",
+      "description": "Variant with one foot forward to prepare kick entries."
+    },
+    "ready-stance": {
+      "name": "Ready stance",
+      "short": "Variant to start movement",
+      "description": "Variant with lower weight, ideal to start a run or pop."
+    },
+    "straight-jump": {
+      "name": "Straight jump",
+      "short": "Vertical jump with arms up",
+      "description": "Vertical jump from two legs, arms up, soft landing in the same spot. You train height and landing control.",
+      "tips": "Push with the whole foot, not just the toes. Land with bent knees to absorb."
+    },
+    "tuck-straight-jump": {
+      "name": "Tuck straight jump",
+      "short": "Jump with knees to chest",
+      "description": "Variant bringing the knees to the chest in the air."
+    },
+    "frog-jump": {
+      "name": "Frog jump",
+      "short": "Jump from crouch",
+      "description": "Jump from a low, almost crouching position, to train leg power.",
+      "tips": "Load your legs as if you were going to jump over an imaginary fence. Hands touch the ground briefly on takeoff."
+    },
+    "baby-frog": {
+      "name": "Baby frog",
+      "short": "Lower variant",
+      "description": "Frog jump variant with less height, ideal for beginners."
+    },
+    "guard": {
+      "name": "Guard",
+      "short": "Defensive position",
+      "description": "Defensive position with active hands, ready to block or attack.",
+      "tips": "Elbows in, hands at face height. Guard is trained like any trick: with repetition and consistency."
+    },
+    "sweep-guard": {
+      "name": "Sweep guard",
+      "short": "Variant with low sweep",
+      "description": "Guard variant with a low sweep included."
+    },
+    "pop-180": {
+      "name": "Pop 180",
+      "short": "Jump with 180 degree turn",
+      "description": "Jump with a 180 degree turn. Takeoff foot, head, shoulders and hips rotate together.",
+      "tips": "Start the turn with the head. Your gaze drives the rotation."
+    },
+    "pop-180-step-out": {
+      "name": "Pop 180 step out",
+      "short": "Variant with step landing",
+      "description": "Pop 180 variant with a step landing instead of stopping."
+    },
+    "front-tuck": {
+      "name": "Front tuck",
+      "short": "Front tuck",
+      "description": "Front rotation with the body tucked to the chest.",
+      "tips": "Grab the knees as you go up. Rotation speed comes from tucking, not from jumping higher."
+    },
+    "front-pike": {
+      "name": "Front pike",
+      "short": "Variant with straight legs",
+      "description": "Front rotation variant with legs straight in a V."
+    },
+    "front-straddle": {
+      "name": "Front straddle",
+      "short": "Variant with open legs",
+      "description": "Front rotation variant with legs in straddle position."
+    },
+    "back-tuck": {
+      "name": "Back tuck",
+      "short": "Back tuck",
+      "description": "Back rotation with the body tucked to the chest. Your first big tricking jump.",
+      "tips": "Throw the head over the shoulder. Jump up, not back."
+    },
+    "back-pike": {
+      "name": "Back pike",
+      "short": "Variant with straight legs",
+      "description": "Back rotation variant with legs in V."
+    },
+    "back-layout": {
+      "name": "Back layout",
+      "short": "Variant with straight body",
+      "description": "Back rotation variant with the body in a straight position."
+    },
+    "front-flip": {
+      "name": "Front flip",
+      "short": "Full front flip",
+      "description": "Full stretched front flip. The back tuck and the pop 180 are its base.",
+      "tips": "Stretch hard the moment you see the ground. Hold the position until the last moment."
+    },
+    "front-flip-step-out": {
+      "name": "Front flip step out",
+      "short": "Variant with step landing",
+      "description": "Front flip with a step landing instead of stopping."
+    },
+    "backflip": {
+      "name": "Backflip",
+      "short": "Full backflip",
+      "description": "The full backflip. Absolute tricking classic.",
+      "tips": "Head back, jump up, open the chest at the end. The landing should be soft."
+    },
+    "backflip-step-out": {
+      "name": "Backflip step out",
+      "short": "Variant with step landing",
+      "description": "Backflip with a step landing instead of stopping."
+    },
+    "arabian-backflip": {
+      "name": "Arabian backflip",
+      "short": "Front flip with back landing",
+      "description": "Front flip landing oriented backwards."
+    },
+    "gainer": {
+      "name": "Gainer",
+      "short": "Backflip with displacement",
+      "description": "Backflip with forward travel, useful for chaining and generating distance.",
+      "tips": "The pop 180 sets the direction. Maintain height."
+    },
+    "gainer-flip": {
+      "name": "Gainer flip",
+      "short": "Variant with more rotation",
+      "description": "Gainer variant with more rotation."
+    },
+    "gainer-twist": {
+      "name": "Gainer twist",
+      "short": "Gainer with twist",
+      "description": "Gainer combined with an extra twist."
+    },
+    "kick-360": {
+      "name": "Kick 360",
+      "short": "Round kick with 360 spin",
+      "description": "Round kick executed in a 360 degree spin.",
+      "tips": "The support foot spins on the ball. The head marks the start and the end."
+    },
+    "kick-540": {
+      "name": "Kick 540",
+      "short": "540 spin with kick",
+      "description": "Kick executed during a 540 degree spin.",
+      "tips": "The kick is thrown in the second half of the spin to keep speed."
+    },
+    "kick-720": {
+      "name": "Kick 720",
+      "short": "720 spin with kick",
+      "description": "Two full rotations with a kick in the air.",
+      "tips": "Get the 540 solid first. The 720 is an extension of the concept."
+    },
+    "kick-900": {
+      "name": "Kick 900",
+      "short": "900 spin with kick",
+      "description": "Advanced variant of the kick 720 with extended spin."
+    },
+    "butterfly-kick": {
+      "name": "Butterfly kick",
+      "short": "Butterfly kick",
+      "description": "Classic kick with legs opening and closing in the air. Style and flight.",
+      "tips": "Hips start the movement. Think of kicking the air, not the ground."
+    },
+    "butterfly-twist": {
+      "name": "Butterfly twist",
+      "short": "Butterfly with twist",
+      "description": "Butterfly kick with an extra 180 twist."
+    },
+    "butterfly-540": {
+      "name": "Butterfly 540",
+      "short": "Butterfly with 540 spin",
+      "description": "Butterfly twist variant with a full 540 spin."
+    },
+    "hook-kick": {
+      "name": "Hook kick",
+      "short": "Hook kick",
+      "description": "Hook kick traveling in an arc. Used in combos and transitions.",
+      "tips": "The knee goes up, the heel describes the arc. Land with control."
+    },
+    "hook-kick-twist": {
+      "name": "Hook kick twist",
+      "short": "Hook with twist",
+      "description": "Hook kick with an extra 180 or more twist."
+    },
+    "round-kick": {
+      "name": "Round kick",
+      "short": "Round kick",
+      "description": "Classic round kick. The base of many combinations."
+    },
+    "round-kick-twist": {
+      "name": "Round kick twist",
+      "short": "Round with twist",
+      "description": "Round kick combined with a twist."
+    },
+    "push-kick": {
+      "name": "Push kick",
+      "short": "Push kick",
+      "description": "Front push kick, useful to keep distance or start combos."
+    },
+    "push-kick-twist": {
+      "name": "Push kick twist",
+      "short": "Push with twist",
+      "description": "Push kick with an extra twist."
+    },
+    "crescent-kick": {
+      "name": "Crescent kick",
+      "short": "Crescent kick",
+      "description": "Inside-to-outside arc kick, like a lunar crescent."
+    },
+    "crescent-twist": {
+      "name": "Crescent twist",
+      "short": "Crescent with twist",
+      "description": "Crescent kick with an extra twist."
+    },
+    "tornado": {
+      "name": "Tornado",
+      "short": "Tornado spin",
+      "description": "Combination of butterfly kick and 720 spin. Continuous, round movement.",
+      "tips": "Chain the kick with the spin, don't separate them. It's one flow."
+    },
+    "tornado-540": {
+      "name": "Tornado 540",
+      "short": "Variant with 540 spin",
+      "description": "Tornado variant with a 540 spin."
+    },
+    "aerial": {
+      "name": "Aerial",
+      "short": "Hands-free aerial",
+      "description": "Airborne rotation without hand support, usually with crescent or hook.",
+      "tips": "Confidence is built with drills on floor and mat."
+    },
+    "aerial-twist": {
+      "name": "Aerial twist",
+      "short": "Aerial with twist",
+      "description": "Aerial with an extra twist."
+    },
+    "double-leg": {
+      "name": "Double leg",
+      "short": "Flip with V legs",
+      "description": "Flip with legs in V position. Style and power.",
+      "tips": "Straight legs come up fast. The head stays neutral."
+    },
+    "double-leg-twist": {
+      "name": "Double leg twist",
+      "short": "Double leg with twist",
+      "description": "Double leg combined with a twist."
+    },
+    "full": {
+      "name": "Full",
+      "short": "Backflip with 360 spin",
+      "description": "Backflip combined with a full rotation. Star piece of many combos.",
+      "tips": "Feel the exact moment to start the spin. It's your most useful trick to chain."
+    },
+    "double-full": {
+      "name": "Double full",
+      "short": "Backflip with 720 spin",
+      "description": "Backflip with two full rotations. Advanced level.",
+      "tips": "You need real height. Train the full until you make it automatic."
+    },
+    "triple-full": {
+      "name": "Triple full",
+      "short": "Backflip with 1080 spin",
+      "description": "Extreme variant with three rotations."
+    },
+    "kip-up": {
+      "name": "Kip up",
+      "short": "Explosive ground stand-up",
+      "description": "From the ground, you push with your back and legs to stand up in a single move.",
+      "tips": "The head stays back; the impulse comes from the lower back and the legs."
+    },
+    "kip-up-twist": {
+      "name": "Kip up twist",
+      "short": "Kip up with twist",
+      "description": "Kip up with an extra twist as you stand up."
+    },
+    "triple": {
+      "name": "Triple",
+      "short": "Three rotations",
+      "description": "Trick with three full rotations. Expert repertoire.",
+      "tips": "Only after many hours of full and double full in your body."
+    },
+    "sw-9": {
+      "name": "SW9",
+      "short": "Sidewinder 9",
+      "description": "Sidewinder level 9 trick. Expert repertoire.",
+      "tips": "Work on sw7 first if it's at your level. Fluidity is everything."
+    },
+    "sw-7": {
+      "name": "SW7",
+      "short": "Sidewinder 7",
+      "description": "More accessible sidewinder variant."
+    },
+    "sw-11": {
+      "name": "SW11",
+      "short": "Sidewinder 11",
+      "description": "Extreme sidewinder variant."
+    },
+    "illusion-combo": {
+      "name": "Illusion combo",
+      "short": "Chained illusion sequence",
+      "description": "Fluid sequence chaining aerial, full and kip up.",
+      "tips": "Think choreography, not isolated tricks."
+    }
+  },
+  "trickPage": {
+    "level": "Level",
+    "family": "Family",
+    "difficulty": "Difficulty",
+    "prerequisites": "Prerequisites",
+    "variations": "Variations",
+    "entries": "Entries",
+    "exits": "Exits",
+    "none": "None",
+    "tags": "Tags",
+    "related": "Related tricks",
+    "noMedia": "No preview yet",
+    "yourProgress": "Your progress",
+    "setStatus": "Mark this trick as…",
+    "addNote": "Add a personal note",
+    "notePlaceholder": "For example: 'land with bent knees', 'on mat, no pain'…",
+    "saveNote": "Save note",
+    "backToTrick": "Back to trick"
+  },
+  "catalog": {
+    "title": "Trick catalog",
+    "subtitle": "Filter by level, family or status. Your selection is reflected in the URL.",
+    "searchPlaceholder": "Search by name…",
+    "filterLevel": "Level",
+    "filterFamily": "Family",
+    "filterStatus": "Status",
+    "resultsCount": "{count, plural, =0 {No results} one {1 trick} other {# tricks}}",
+    "empty": "No tricks match the filters.",
+    "clearFilters": "Clear filters"
+  },
+  "progress": {
+    "title": "My progress",
+    "subtitle": "Your progress is saved in this browser. You can export or import it whenever you want.",
+    "summary": "Summary",
+    "totalTricks": "Total tricks",
+    "mastered": "Mastered",
+    "learning": "Learning",
+    "available": "Available",
+    "locked": "Locked",
+    "byLevel": "Progress by level",
+    "actions": "Actions",
+    "exportTitle": "Export my progress",
+    "exportDesc": "Download a JSON file with your status and notes. Useful to switch devices or have a backup.",
+    "exportButton": "Download JSON",
+    "importTitle": "Import progress",
+    "importDesc": "Load a previously exported JSON. Your current status will be replaced.",
+    "importButton": "Import JSON",
+    "resetTitle": "Reset everything",
+    "resetDesc": "Erases your progress and notes. This action cannot be undone.",
+    "resetButton": "Reset",
+    "resetConfirm": "Are you sure you want to erase all your progress?",
+    "imported": "Progress imported successfully",
+    "importedError": "Could not import the file. Is it valid JSON?",
+    "exported": "Progress exported",
+    "resetDone": "Progress reset",
+    "noProgress": "You haven't marked any tricks yet. Start on the home page."
+  },
+  "about": {
+    "title": "About Trickdex",
+    "subtitle": "A personal, simple and honest guide to learning tricking.",
+    "whatIsTitle": "What is this?",
+    "whatIsBody": "Trickdex is an open roadmap to learn tricking. It doesn't replace a coach, but it gives you a clear map of what to learn, in what order, and how to chain tricks.",
+    "philosophyTitle": "Philosophy",
+    "philosophyBody": "We believe in patient learning. Prerequisites aren't a hurdle: they're the shortest path.",
+    "dataTitle": "Data and privacy",
+    "dataBody": "Your progress lives in your browser. There are no accounts, no servers storing your information. If you want to move it to another device, use export and import.",
+    "roadmapTitle": "What's coming",
+    "roadmapBody": "The MVP is just the beginning. We have in mind a visual skill tree, a combo builder and, someday, a community. All in due time.",
+    "creditsTitle": "Credits",
+    "creditsBody": "Built with care by the tricking community. The MVP media clips are placeholders."
+  },
+  "footer": {
+    "madeWith": "Made with focus and lots of foam rolling",
+    "viewSource": "View source"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The route you are looking for doesn't exist or was moved.",
+    "back": "Back to home"
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "common": {
+    "appName": "Trickdex",
+    "tagline": "Tu roadmap de tricking, de cero a experto",
+    "start": "Empezar",
+    "explore": "Explorar catálogo",
+    "back": "Volver",
+    "loading": "Cargando…",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "all": "Todos",
+    "reset": "Restablecer",
+    "export": "Exportar",
+    "import": "Importar",
+    "language": "Idioma",
+    "theme": "Tema",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro",
+    "themeSystem": "Sistema"
+  },
+  "nav": {
+    "home": "Inicio",
+    "tricks": "Trucos",
+    "progress": "Mi progreso",
+    "about": "Acerca de"
+  },
+  "home": {
+    "title": "Aprende tricking, nivel a nivel",
+    "subtitle": "Un roadmap claro desde tus primeros saltos hasta las combinaciones más complejas. Marca tu progreso localmente y vuelve cuando quieras.",
+    "ctaPrimary": "Empezar por el nivel 1",
+    "ctaSecondary": "Ver catálogo completo",
+    "levelsHeading": "Hoja de ruta por niveles",
+    "tricksHeading": "Trucos destacados",
+    "featuresTitle": "Lo que encontrarás",
+    "feature1Title": "Catálogo por niveles",
+    "feature1Desc": "Ocho niveles ordenados por dificultad, con descripción de cada etapa.",
+    "feature2Title": "Prerequisitos claros",
+    "feature2Desc": "Cada truco muestra qué necesitas dominar antes de intentarlo.",
+    "feature3Title": "Entradas y salidas",
+    "feature3Desc": "Aprende a encadenar trucos con transiciones suaves.",
+    "feature4Title": "Progreso local",
+    "feature4Desc": "Tu avance se guarda en este dispositivo. Sin cuentas, sin rastreo."
+  },
+  "levels": {
+    "1": {
+      "title": "Fundamentos",
+      "description": "Postura, salto vertical, salto de rana y guardia. La base que todo lo demás necesita."
+    },
+    "2": {
+      "title": "Bases aéreas",
+      "description": "Pop 180 y las primeras vueltas agrupadas de frente y de atrás."
+    },
+    "3": {
+      "title": "Volteretas",
+      "description": "Front flip, backflip y gainer. Aprendes a rotar y a caer con control."
+    },
+    "4": {
+      "title": "Giros",
+      "description": "Patadas 360, 540 y 720. La rotación horizontal entra en juego."
+    },
+    "5": {
+      "title": "Patadas aéreas",
+      "description": "Hook, round, push y crescent. Patadas que viajan por el aire."
+    },
+    "6": {
+      "title": "Combinados",
+      "description": "Butterfly twist, tornado y aerial. Empiezas a mezclar familias."
+    },
+    "7": {
+      "title": "Avanzados",
+      "description": "Double leg, full, double full y kip up. Rotaciones múltiples y salidas explosivas."
+    },
+    "8": {
+      "title": "Experto",
+      "description": "Triples, sw9 y combinaciones de ilusión. El repertorio más alto del tricking."
+    }
+  },
+  "families": {
+    "flip": "Voltereta",
+    "twist": "Giro",
+    "kick": "Patada",
+    "vault": "Salto",
+    "ground": "Suelo",
+    "transition": "Transición"
+  },
+  "status": {
+    "locked": "Bloqueado",
+    "available": "Disponible",
+    "learning": "Aprendiendo",
+    "mastered": "Dominado"
+  },
+  "tricks": {
+    "stance": {
+      "name": "Postura",
+      "short": "Posición base de tricking",
+      "description": "Postura de combate relajada: pies a la anchura de los hombros, rodillas ligeramente flexionadas, peso centrado. Es el punto de partida y el retorno de casi todo.",
+      "tips": "Mantén los pies paralelos y la mirada al frente. El peso debe sentirse ligero, listo para saltar."
+    },
+    "fighting-stance": {
+      "name": "Postura de combate",
+      "short": "Variante con pie adelantado",
+      "description": "Variante con un pie adelantado para preparar entradas de patada."
+    },
+    "ready-stance": {
+      "name": "Postura lista",
+      "short": "Variante para arrancar movimiento",
+      "description": "Variante con peso más bajo, ideal para iniciar carrera o pop."
+    },
+    "straight-jump": {
+      "name": "Salto vertical",
+      "short": "Salto recto con brazos arriba",
+      "description": "Salto vertical desde dos piernas, brazos arriba, aterrizaje suave en el mismo sitio. Trabajas la altura y el control de caída.",
+      "tips": "Empuja con todo el pie, no solo con la punta. Aterriza con las rodillas dobladas para absorber."
+    },
+    "tuck-straight-jump": {
+      "name": "Salto vertical agrupado",
+      "short": "Salto con rodillas al pecho",
+      "description": "Variante llevando las rodillas al pecho en el aire."
+    },
+    "frog-jump": {
+      "name": "Salto de rana",
+      "short": "Salto desde cuclillas",
+      "description": "Salto desde una posición baja, casi en cuclillas, para trabajar la potencia de piernas.",
+      "tips": "Carga en las piernas como si fueras a saltar una valla imaginaria. Las manos tocan el suelo brevemente al despegar."
+    },
+    "baby-frog": {
+      "name": "Rana pequeña",
+      "short": "Variante más baja",
+      "description": "Variante del salto de rana con menos altura, ideal para principiantes."
+    },
+    "guard": {
+      "name": "Guardia",
+      "short": "Posición defensiva",
+      "description": "Posición defensiva con manos activas, listo para bloquear o atacar.",
+      "tips": "Codos pegados, manos a la altura de la cara. La guardia se trabaja como cualquier truco: con repetición y constancia."
+    },
+    "sweep-guard": {
+      "name": "Barrido en guardia",
+      "short": "Variante con barrido bajo",
+      "description": "Variante de guardia con un barrido bajo incluido."
+    },
+    "pop-180": {
+      "name": "Pop 180",
+      "short": "Salto con giro de 180 grados",
+      "description": "Salto con giro de 180 grados. Pie de despegue, cabeza, hombros y cadera giran juntos.",
+      "tips": "Inicia el giro con la cabeza. La mirada dirige la rotación."
+    },
+    "pop-180-step-out": {
+      "name": "Pop 180 step out",
+      "short": "Variante con salida en paso",
+      "description": "Variante del pop 180 con aterrizaje en paso en lugar de parado."
+    },
+    "front-tuck": {
+      "name": "Vuelta de frente agrupada",
+      "short": "Front tuck",
+      "description": "Vuelta hacia delante con el cuerpo agrupado al pecho.",
+      "tips": "Agarra las rodillas al subir. La velocidad de rotación viene del agrupar, no de saltar más alto."
+    },
+    "front-pike": {
+      "name": "Front pike",
+      "short": "Variante con piernas rectas",
+      "description": "Variante de la vuelta de frente con piernas rectas en V."
+    },
+    "front-straddle": {
+      "name": "Front straddle",
+      "short": "Variante con piernas abiertas",
+      "description": "Variante de la vuelta de frente con piernas en posición de straddle."
+    },
+    "back-tuck": {
+      "name": "Vuelta de atrás agrupada",
+      "short": "Back tuck",
+      "description": "Vuelta hacia atrás con el cuerpo agrupado al pecho. Tu primer gran salto en tricking.",
+      "tips": "Lanza la cabeza por encima del hombro. Salta hacia arriba, no hacia atrás."
+    },
+    "back-pike": {
+      "name": "Back pike",
+      "short": "Variante con piernas rectas",
+      "description": "Variante de la vuelta de atrás con piernas en V."
+    },
+    "back-layout": {
+      "name": "Back layout",
+      "short": "Variante con cuerpo recto",
+      "description": "Variante de la vuelta de atrás con el cuerpo en posición recta."
+    },
+    "front-flip": {
+      "name": "Front flip",
+      "short": "Vuelta frontal completa",
+      "description": "Vuelta frontal completa estirada. El back tuck y el pop 180 son su base.",
+      "tips": "Estira fuerte en el momento de ver el suelo. Aguanta la posición hasta el último momento."
+    },
+    "front-flip-step-out": {
+      "name": "Front flip step out",
+      "short": "Variante con salida en paso",
+      "description": "Front flip con aterrizaje en paso en lugar de parado."
+    },
+    "backflip": {
+      "name": "Backflip",
+      "short": "Vuelta atrás completa",
+      "description": "La vuelta atrás completa. Clásico absoluto del tricking.",
+      "tips": "Cabeza atrás, salta arriba, abre el pecho al final. La caída debe ser ligera."
+    },
+    "backflip-step-out": {
+      "name": "Backflip step out",
+      "short": "Variante con salida en paso",
+      "description": "Backflip con aterrizaje en paso en lugar de parado."
+    },
+    "arabian-backflip": {
+      "name": "Arabian backflip",
+      "short": "Front flip con salida de espalda",
+      "description": "Front flip con aterrizaje orientado hacia atrás."
+    },
+    "gainer": {
+      "name": "Gainer",
+      "short": "Backflip con desplazamiento",
+      "description": "Backflip con avance, útil para encadenar y para generar distancia.",
+      "tips": "El pop 180 marca la dirección. Mantén la altura."
+    },
+    "gainer-flip": {
+      "name": "Gainer flip",
+      "short": "Variante más rotada",
+      "description": "Variante del gainer con mayor rotación."
+    },
+    "gainer-twist": {
+      "name": "Gainer twist",
+      "short": "Gainer con giro",
+      "description": "Gainer combinado con giro adicional."
+    },
+    "kick-360": {
+      "name": "Patada 360",
+      "short": "Round kick con giro 360",
+      "description": "Round kick ejecutado en un giro de 360 grados.",
+      "tips": "El pie de apoyo gira sobre la punta. La cabeza marca el inicio y el final."
+    },
+    "kick-540": {
+      "name": "Patada 540",
+      "short": "Giro 540 con patada",
+      "description": "Patada ejecutada durante un giro de 540 grados.",
+      "tips": "La patada se lanza en la segunda mitad del giro para mantener velocidad."
+    },
+    "kick-720": {
+      "name": "Patada 720",
+      "short": "Giro 720 con patada",
+      "description": "Dos vueltas completas con patada en el aire.",
+      "tips": "Trabaja primero el 540 sólido. El 720 es extensión del concepto."
+    },
+    "kick-900": {
+      "name": "Patada 900",
+      "short": "Giro 900 con patada",
+      "description": "Variante avanzada del kick 720 con giro extendido."
+    },
+    "butterfly-kick": {
+      "name": "Butterfly kick",
+      "short": "Patada mariposa",
+      "description": "Patada clásica con piernas abriéndose y cerrándose en el aire. Estilo y vuelo.",
+      "tips": "Las caderas inician el movimiento. Piensa en patear el aire, no el suelo."
+    },
+    "butterfly-twist": {
+      "name": "Butterfly twist",
+      "short": "Mariposa con giro",
+      "description": "Butterfly kick con giro adicional de 180 grados."
+    },
+    "butterfly-540": {
+      "name": "Butterfly 540",
+      "short": "Mariposa con giro 540",
+      "description": "Variante del butterfly twist con giro completo de 540."
+    },
+    "hook-kick": {
+      "name": "Hook kick",
+      "short": "Patada de gancho",
+      "description": "Patada de gancho que viaja en arco. Se usa en combos y transiciones.",
+      "tips": "La rodilla sube, el talón describe el arco. Aterriza con control."
+    },
+    "hook-kick-twist": {
+      "name": "Hook kick twist",
+      "short": "Hook con giro",
+      "description": "Hook kick con giro adicional de 180 o más."
+    },
+    "round-kick": {
+      "name": "Round kick",
+      "short": "Patada circular",
+      "description": "Patada circular clásica. Base de muchas combinaciones."
+    },
+    "round-kick-twist": {
+      "name": "Round kick twist",
+      "short": "Round con giro",
+      "description": "Round kick combinado con giro."
+    },
+    "push-kick": {
+      "name": "Push kick",
+      "short": "Patada de empuje",
+      "description": "Patada que empuja al frente, útil para mantener distancia o iniciar combos."
+    },
+    "push-kick-twist": {
+      "name": "Push kick twist",
+      "short": "Push con giro",
+      "description": "Push kick con giro adicional."
+    },
+    "crescent-kick": {
+      "name": "Crescent kick",
+      "short": "Patada creciente",
+      "description": "Patada en arco de dentro hacia afuera, como un creciente lunar."
+    },
+    "crescent-twist": {
+      "name": "Crescent twist",
+      "short": "Crescent con giro",
+      "description": "Crescent kick con giro adicional."
+    },
+    "tornado": {
+      "name": "Tornado",
+      "short": "Giro tornado",
+      "description": "Combinación de butterfly kick y giro 720. Movimiento continuo y redondo.",
+      "tips": "Encadena la patada con el giro, no las separes. Es un solo flujo."
+    },
+    "tornado-540": {
+      "name": "Tornado 540",
+      "short": "Variante con giro 540",
+      "description": "Variante del tornado con giro de 540."
+    },
+    "aerial": {
+      "name": "Aerial",
+      "short": "Aerial sin manos",
+      "description": "Giro en el aire sin apoyo de manos, normalmente con crescent o hook.",
+      "tips": "La confianza se construye con drills en suelo y colchoneta."
+    },
+    "aerial-twist": {
+      "name": "Aerial twist",
+      "short": "Aerial con giro",
+      "description": "Aerial con giro adicional."
+    },
+    "double-leg": {
+      "name": "Double leg",
+      "short": "Vuelta con piernas en V",
+      "description": "Vuelta con piernas en posición de V. Estilo y potencia.",
+      "tips": "Las piernas rectas suben rápido. La cabeza se queda neutral."
+    },
+    "double-leg-twist": {
+      "name": "Double leg twist",
+      "short": "Double leg con giro",
+      "description": "Double leg combinado con giro."
+    },
+    "full": {
+      "name": "Full",
+      "short": "Backflip con giro 360",
+      "description": "Backflip combinado con un giro completo. Pieza estrella de muchos combos.",
+      "tips": "Siente el momento exacto de iniciar el giro. Es tu truco más útil para encadenar."
+    },
+    "double-full": {
+      "name": "Double full",
+      "short": "Backflip con giro 720",
+      "description": "Backflip con dos giros completos. Nivel avanzado.",
+      "tips": "Necesitas altura real. Entrena el full hasta hacerlo automático."
+    },
+    "triple-full": {
+      "name": "Triple full",
+      "short": "Backflip con giro 1080",
+      "description": "Variante extrema con tres giros."
+    },
+    "kip-up": {
+      "name": "Kip up",
+      "short": "Levantada explosiva del suelo",
+      "description": "Desde el suelo, te impulsas con la espalda y las piernas para volver de pie en un solo movimiento.",
+      "tips": "La cabeza queda atrás, el impulso viene de la zona lumbar y las piernas."
+    },
+    "kip-up-twist": {
+      "name": "Kip up twist",
+      "short": "Kip up con giro",
+      "description": "Kip up con giro adicional al levantarse."
+    },
+    "triple": {
+      "name": "Triple",
+      "short": "Tres rotaciones",
+      "description": "Truco de tres rotaciones completas. Repertorio experto.",
+      "tips": "Solo con muchas horas de full y double full en el cuerpo."
+    },
+    "sw-9": {
+      "name": "SW9",
+      "short": "Sidewinder 9",
+      "description": "Truco de sidewinder nivel 9. Repertorio experto.",
+      "tips": "Trabaja primero sw7 si existe en tu nivel. La fluidez lo es todo."
+    },
+    "sw-7": {
+      "name": "SW7",
+      "short": "Sidewinder 7",
+      "description": "Variante más accesible del sidewinder."
+    },
+    "sw-11": {
+      "name": "SW11",
+      "short": "Sidewinder 11",
+      "description": "Variante extrema del sidewinder."
+    },
+    "illusion-combo": {
+      "name": "Ilusión combinada",
+      "short": "Secuencia de ilusiones encadenadas",
+      "description": "Secuencia de movimientos fluidos que encadena aerial, full y kip up.",
+      "tips": "Piensa en coreografía, no en trucos aislados."
+    }
+  },
+  "trickPage": {
+    "level": "Nivel",
+    "family": "Familia",
+    "difficulty": "Dificultad",
+    "prerequisites": "Prerequisitos",
+    "variations": "Variaciones",
+    "entries": "Entradas",
+    "exits": "Salidas",
+    "none": "Ninguno",
+    "tags": "Etiquetas",
+    "related": "Trucos relacionados",
+    "noMedia": "Sin previsualización aún",
+    "yourProgress": "Tu progreso",
+    "setStatus": "Marca este truco como…",
+    "addNote": "Añade una nota personal",
+    "notePlaceholder": "Por ejemplo: 'caer con rodillas flexionadas', 'en colchoneta, sin dolor'…",
+    "saveNote": "Guardar nota",
+    "backToTrick": "Volver al truco"
+  },
+  "catalog": {
+    "title": "Catálogo de trucos",
+    "subtitle": "Filtra por nivel, familia o estado. Tu selección se refleja en la URL.",
+    "searchPlaceholder": "Busca por nombre…",
+    "filterLevel": "Nivel",
+    "filterFamily": "Familia",
+    "filterStatus": "Estado",
+    "resultsCount": "{count, plural, =0 {Sin resultados} one {1 truco} other {# trucos}}",
+    "empty": "No hay trucos que coincidan con los filtros.",
+    "clearFilters": "Limpiar filtros"
+  },
+  "progress": {
+    "title": "Mi progreso",
+    "subtitle": "Tu avance se guarda en este navegador. Puedes exportarlo o importarlo cuando quieras.",
+    "summary": "Resumen",
+    "totalTricks": "Trucos totales",
+    "mastered": "Dominados",
+    "learning": "Aprendiendo",
+    "available": "Disponibles",
+    "locked": "Bloqueados",
+    "byLevel": "Progreso por nivel",
+    "actions": "Acciones",
+    "exportTitle": "Exportar mi progreso",
+    "exportDesc": "Descarga un archivo JSON con tu estado y notas. Útil para cambiar de dispositivo o tener un respaldo.",
+    "exportButton": "Descargar JSON",
+    "importTitle": "Importar progreso",
+    "importDesc": "Carga un JSON exportado previamente. Tu estado actual se reemplazará.",
+    "importButton": "Importar JSON",
+    "resetTitle": "Restablecer todo",
+    "resetDesc": "Borra tu progreso y notas. Esta acción no se puede deshacer.",
+    "resetButton": "Restablecer",
+    "resetConfirm": "¿Seguro que quieres borrar todo tu progreso?",
+    "imported": "Progreso importado correctamente",
+    "importedError": "No se pudo importar el archivo. ¿Es un JSON válido?",
+    "exported": "Progreso exportado",
+    "resetDone": "Progreso restablecido",
+    "noProgress": "Aún no has marcado ningún truco. Empieza por la página de inicio."
+  },
+  "about": {
+    "title": "Acerca de Trickdex",
+    "subtitle": "Una guía personal, simple y honesta para aprender tricking.",
+    "whatIsTitle": "¿Qué es esto?",
+    "whatIsBody": "Trickdex es un roadmap abierto para aprender tricking. No reemplaza a un coach, pero te da un mapa claro de qué aprender, en qué orden y cómo encadenar trucos.",
+    "philosophyTitle": "Filosofía",
+    "philosophyBody": "Creemos en el aprendizaje paciente. Los prerequisitos no son una traba: son el camino más corto.",
+    "dataTitle": "Datos y privacidad",
+    "dataBody": "Tu progreso vive en tu navegador. No hay cuentas, ni servidores guardando tu información. Si quieres moverlo a otro dispositivo, usa exportar e importar.",
+    "roadmapTitle": "Qué viene",
+    "roadmapBody": "El MVP es solo el inicio. Tenemos en mente un árbol visual de skills, un constructor de combos y, algún día, una comunidad. Todo a su tiempo.",
+    "creditsTitle": "Créditos",
+    "creditsBody": "Construido con cariño por la comunidad de tricking. Los clips multimedia del MVP son placeholders."
+  },
+  "footer": {
+    "madeWith": "Hecho con enfoque y mucho foam rolling",
+    "viewSource": "Ver código"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La ruta que buscas no existe o se movió.",
+    "back": "Volver al inicio"
+  }
+}
